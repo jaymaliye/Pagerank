@@ -451,24 +451,168 @@ Your goal should be to discover what topics that www.lawfareblog.com considers t
    Task 1, part 2:
    ```
    $ python3 pagerank.py --data=data/lawfareblog.csv.gz --search_query='corona'
+   INFO:root:rank=0 pagerank=1.0038e-03 url=www.lawfareblog.com/lawfare-podcast-united-nations-and-coronavirus-crisis
+    INFO:root:rank=1 pagerank=8.9224e-04 url=www.lawfareblog.com/house-oversight-committee-holds-day-two-hearing-government-coronavirus-response
+    INFO:root:rank=2 pagerank=7.0390e-04 url=www.lawfareblog.com/britains-coronavirus-response
+    INFO:root:rank=3 pagerank=6.9153e-04 url=www.lawfareblog.com/prosecuting-purposeful-coronavirus-exposure-terrorism
+    INFO:root:rank=4 pagerank=6.7041e-04 url=www.lawfareblog.com/israeli-emergency-regulations-location-tracking-coronavirus-carriers
+    INFO:root:rank=5 pagerank=6.6256e-04 url=www.lawfareblog.com/why-congress-conducting-business-usual-face-coronavirus
+    INFO:root:rank=6 pagerank=6.5046e-04 url=www.lawfareblog.com/congressional-homeland-security-committees-seek-ways-support-state-federal-responses-coronavirus
+    INFO:root:rank=7 pagerank=6.3620e-04 url=www.lawfareblog.com/paper-hearing-experts-debate-digital-contact-tracing-and-coronavirus-privacy-concerns
+    INFO:root:rank=8 pagerank=6.1248e-04 url=www.lawfareblog.com/house-subcommittee-voices-concerns-over-us-management-coronavirus
+    INFO:root:rank=9 pagerank=6.0187e-04 url=www.lawfareblog.com/livestream-house-oversight-committee-holds-hearing-government-coronavirus-response
 
    $ python3 pagerank.py --data=data/lawfareblog.csv.gz --search_query='trump'
+   INFO:root:rank=0 pagerank=5.7826e-03 url=www.lawfareblog.com/trump-asks-supreme-court-stay-congressional-subpeona-tax-returns
+    INFO:root:rank=1 pagerank=5.2338e-03 url=www.lawfareblog.com/document-trump-revokes-obama-executive-order-counterterrorism-strike-casualty-reporting
+    INFO:root:rank=2 pagerank=5.1297e-03 url=www.lawfareblog.com/trump-administrations-worrying-new-policy-israeli-settlements
+    INFO:root:rank=3 pagerank=4.6599e-03 url=www.lawfareblog.com/dc-circuit-overrules-district-courts-due-process-ruling-qasim-v-trump
+    INFO:root:rank=4 pagerank=4.5934e-03 url=www.lawfareblog.com/donald-trump-and-politically-weaponized-executive-branch
+    INFO:root:rank=5 pagerank=4.3071e-03 url=www.lawfareblog.com/how-trumps-approach-middle-east-ignores-past-future-and-human-condition
+    INFO:root:rank=6 pagerank=4.0935e-03 url=www.lawfareblog.com/why-trump-cant-buy-greenland
+    INFO:root:rank=7 pagerank=3.7591e-03 url=www.lawfareblog.com/oral-argument-summary-qassim-v-trump
+    INFO:root:rank=8 pagerank=3.4509e-03 url=www.lawfareblog.com/dc-circuit-court-denies-trump-rehearing-mazars-case
+    INFO:root:rank=9 pagerank=3.4484e-03 url=www.lawfareblog.com/second-circuit-rules-mazars-must-hand-over-trump-tax-returns-new-york-prosecutors
 
    $ python3 pagerank.py --data=data/lawfareblog.csv.gz --search_query='iran'
+    INFO:root:rank=0 pagerank=4.5746e-03 url=www.lawfareblog.com/praise-presidents-iran-tweets
+    INFO:root:rank=1 pagerank=4.4174e-03 url=www.lawfareblog.com/how-us-iran-tensions-could-disrupt-iraqs-fragile-peace
+    INFO:root:rank=2 pagerank=2.6928e-03 url=www.lawfareblog.com/cyber-command-operational-update-clarifying-june-2019-iran-operation
+    INFO:root:rank=3 pagerank=1.9391e-03 url=www.lawfareblog.com/aborted-iran-strike-fine-line-between-necessity-and-revenge
+    INFO:root:rank=4 pagerank=1.5452e-03 url=www.lawfareblog.com/parsing-state-departments-letter-use-force-against-iran
+    INFO:root:rank=5 pagerank=1.5357e-03 url=www.lawfareblog.com/iranian-hostage-crisis-and-its-effect-american-politics
+    INFO:root:rank=6 pagerank=1.5258e-03 url=www.lawfareblog.com/announcing-united-states-and-use-force-against-iran-new-lawfare-e-book
+    INFO:root:rank=7 pagerank=1.4221e-03 url=www.lawfareblog.com/us-names-iranian-revolutionary-guard-terrorist-organization-and-sanctions-international-criminal
+    INFO:root:rank=8 pagerank=1.1788e-03 url=www.lawfareblog.com/iran-shoots-down-us-drone-domestic-and-international-legal-implications
+    INFO:root:rank=9 pagerank=1.1463e-03 url=www.lawfareblog.com/israel-iran-syria-clash-and-law-use-force
    ```
 
    Task 1, part 3:
    ```
    $ python3 pagerank.py --data=data/lawfareblog.csv.gz
+    INFO:root:rank=0 pagerank=2.8741e-01 url=www.lawfareblog.com/lawfare-job-board
+    INFO:root:rank=1 pagerank=2.8741e-01 url=www.lawfareblog.com/masthead
+    INFO:root:rank=2 pagerank=2.8741e-01 url=www.lawfareblog.com/litigation-documents-related-appointment-matthew-whitaker-acting-attorney-general
+    INFO:root:rank=3 pagerank=2.8741e-01 url=www.lawfareblog.com/documents-related-mueller-investigation
+    INFO:root:rank=4 pagerank=2.8741e-01 url=www.lawfareblog.com/topics
+    INFO:root:rank=5 pagerank=2.8741e-01 url=www.lawfareblog.com/about-lawfare-brief-history-term-and-site
+    INFO:root:rank=6 pagerank=2.8741e-01 url=www.lawfareblog.com/snowden-revelations
+    INFO:root:rank=7 pagerank=2.8741e-01 url=www.lawfareblog.com/support-lawfare
+    INFO:root:rank=8 pagerank=2.8741e-01 url=www.lawfareblog.com/upcoming-events
+    INFO:root:rank=9 pagerank=2.8741e-01 url=www.lawfareblog.com/our-comments-policy
+   
 
    $ python3 pagerank.py --data=data/lawfareblog.csv.gz --filter_ratio=0.2
+    INFO:root:rank=0 pagerank=3.4696e-01 url=www.lawfareblog.com/trump-asks-supreme-court-stay-congressional-subpeona-tax-returns
+    INFO:root:rank=1 pagerank=2.9521e-01 url=www.lawfareblog.com/livestream-nov-21-impeachment-hearings-0
+    INFO:root:rank=2 pagerank=2.9040e-01 url=www.lawfareblog.com/opening-statement-david-holmes
+    INFO:root:rank=3 pagerank=1.5179e-01 url=www.lawfareblog.com/lawfare-podcast-ben-nimmo-whack-mole-game-disinformation
+    INFO:root:rank=4 pagerank=1.5099e-01 url=www.lawfareblog.com/todays-headlines-and-commentary-1963
+    INFO:root:rank=5 pagerank=1.5099e-01 url=www.lawfareblog.com/todays-headlines-and-commentary-1964
+    INFO:root:rank=6 pagerank=1.5071e-01 url=www.lawfareblog.com/lawfare-podcast-week-was-impeachment
+    INFO:root:rank=7 pagerank=1.4957e-01 url=www.lawfareblog.com/todays-headlines-and-commentary-1962
+    INFO:root:rank=8 pagerank=1.4367e-01 url=www.lawfareblog.com/cyberlaw-podcast-mistrusting-google
+    INFO:root:rank=9 pagerank=1.4240e-01 url=www.lawfareblog.com/lawfare-podcast-bonus-edition-gordon-sondland-vs-committee-no-bull
    ```
 
    Task 1, part 4:
    ```
    $ python3 pagerank.py --data=data/lawfareblog.csv.gz --verbose 
+    DEBUG:root:computing indices
+    DEBUG:root:computing values
+    DEBUG:root:i=0 residual=1.3793821334838867
+    DEBUG:root:i=1 residual=0.11642514914274216
+    DEBUG:root:i=2 residual=0.07495073974132538
+    DEBUG:root:i=3 residual=0.031712669879198074
+    DEBUG:root:i=4 residual=0.01746140420436859
+    DEBUG:root:i=5 residual=0.008529536426067352
+    DEBUG:root:i=6 residual=0.0044392067939043045
+    DEBUG:root:i=7 residual=0.002238823566585779
+    DEBUG:root:i=8 residual=0.0011464565759524703
+    DEBUG:root:i=9 residual=0.0005798051133751869
+    DEBUG:root:i=10 residual=0.00029213540256023407
+    DEBUG:root:i=11 residual=0.00014553092478308827
+    DEBUG:root:i=12 residual=7.149828888941556e-05
+    DEBUG:root:i=13 residual=3.433692472754046e-05
+    DEBUG:root:i=14 residual=1.5638515833416022e-05
+    DEBUG:root:i=15 residual=6.266389391385019e-06
+    DEBUG:root:i=16 residual=2.8251236017240444e-06
+    DEBUG:root:i=17 residual=1.3609912912215805e-06
+    DEBUG:root:i=18 residual=4.311152963509812e-07
+    INFO:root:rank=0 pagerank=2.8741e-01 url=www.lawfareblog.com/lawfare-job-board
+    INFO:root:rank=1 pagerank=2.8741e-01 url=www.lawfareblog.com/masthead
+    INFO:root:rank=2 pagerank=2.8741e-01 url=www.lawfareblog.com/litigation-documents-related-appointment-matthew-whitaker-acting-attorney-general
+    INFO:root:rank=3 pagerank=2.8741e-01 url=www.lawfareblog.com/documents-related-mueller-investigation
+    INFO:root:rank=4 pagerank=2.8741e-01 url=www.lawfareblog.com/topics
+    INFO:root:rank=5 pagerank=2.8741e-01 url=www.lawfareblog.com/about-lawfare-brief-history-term-and-site
+    INFO:root:rank=6 pagerank=2.8741e-01 url=www.lawfareblog.com/snowden-revelations
+    INFO:root:rank=7 pagerank=2.8741e-01 url=www.lawfareblog.com/support-lawfare
+    INFO:root:rank=8 pagerank=2.8741e-01 url=www.lawfareblog.com/upcoming-events
+    INFO:root:rank=9 pagerank=2.8741e-01 url=www.lawfareblog.com/our-comments-policy
+
    $ python3 pagerank.py --data=data/lawfareblog.csv.gz --verbose --alpha=0.99999
+    DEBUG:root:computing indices
+    DEBUG:root:computing values
+    DEBUG:root:i=0 residual=1.3845856189727783
+    DEBUG:root:i=1 residual=0.07088156789541245
+    DEBUG:root:i=2 residual=0.01882227510213852
+    DEBUG:root:i=3 residual=0.006958262529224157
+    DEBUG:root:i=4 residual=0.0027358194347471
+    DEBUG:root:i=5 residual=0.0010345563059672713
+    DEBUG:root:i=6 residual=0.0003774634387809783
+    DEBUG:root:i=7 residual=0.00013533401943277568
+    DEBUG:root:i=8 residual=4.8224112106254324e-05
+    DEBUG:root:i=9 residual=1.7172435036627576e-05
+    DEBUG:root:i=10 residual=6.118058081483468e-06
+    DEBUG:root:i=11 residual=2.173422217310872e-06
+    DEBUG:root:i=12 residual=7.82504116614291e-07
+    INFO:root:rank=0 pagerank=2.8859e-01 url=www.lawfareblog.com/lawfare-job-board
+    INFO:root:rank=1 pagerank=2.8859e-01 url=www.lawfareblog.com/masthead
+    INFO:root:rank=2 pagerank=2.8859e-01 url=www.lawfareblog.com/litigation-documents-related-appointment-matthew-whitaker-acting-attorney-general
+    INFO:root:rank=3 pagerank=2.8859e-01 url=www.lawfareblog.com/documents-related-mueller-investigation
+    INFO:root:rank=4 pagerank=2.8859e-01 url=www.lawfareblog.com/topics
+    INFO:root:rank=5 pagerank=2.8859e-01 url=www.lawfareblog.com/about-lawfare-brief-history-term-and-site
+    INFO:root:rank=6 pagerank=2.8859e-01 url=www.lawfareblog.com/snowden-revelations
+    INFO:root:rank=7 pagerank=2.8859e-01 url=www.lawfareblog.com/support-lawfare
+    INFO:root:rank=8 pagerank=2.8859e-01 url=www.lawfareblog.com/upcoming-events
+    INFO:root:rank=9 pagerank=2.8859e-01 url=www.lawfareblog.com/our-comments-policy
+
    $ python3 pagerank.py --data=data/lawfareblog.csv.gz --verbose --filter_ratio=0.2
+    DEBUG:root:computing indices
+    DEBUG:root:computing values
+    DEBUG:root:i=0 residual=1.2609827518463135
+    DEBUG:root:i=1 residual=0.49858558177948
+    DEBUG:root:i=2 residual=0.13420072197914124
+    DEBUG:root:i=3 residual=0.0692318007349968
+    DEBUG:root:i=4 residual=0.023411516100168228
+    DEBUG:root:i=5 residual=0.010188630782067776
+    DEBUG:root:i=6 residual=0.004910613875836134
+    DEBUG:root:i=7 residual=0.002279882086440921
+    DEBUG:root:i=8 residual=0.0010739191202446818
+    DEBUG:root:i=9 residual=0.0005249588284641504
+    DEBUG:root:i=10 residual=0.00026969940518029034
+    DEBUG:root:i=11 residual=0.00014575093518942595
+    DEBUG:root:i=12 residual=8.241771865868941e-05
+    DEBUG:root:i=13 residual=4.819605601369403e-05
+    DEBUG:root:i=14 residual=2.881278851418756e-05
+    DEBUG:root:i=15 residual=1.7407368432031944e-05
+    DEBUG:root:i=16 residual=1.0556699635344557e-05
+    DEBUG:root:i=17 residual=6.386945642589126e-06
+    DEBUG:root:i=18 residual=3.835165898635751e-06
+    DEBUG:root:i=19 residual=2.295828835485736e-06
+    DEBUG:root:i=20 residual=1.3655146631208481e-06
+    DEBUG:root:i=21 residual=8.102273341137334e-07
+    INFO:root:rank=0 pagerank=3.4696e-01 url=www.lawfareblog.com/trump-asks-supreme-court-stay-congressional-subpeona-tax-returns
+    INFO:root:rank=1 pagerank=2.9521e-01 url=www.lawfareblog.com/livestream-nov-21-impeachment-hearings-0
+    INFO:root:rank=2 pagerank=2.9040e-01 url=www.lawfareblog.com/opening-statement-david-holmes
+    INFO:root:rank=3 pagerank=1.5179e-01 url=www.lawfareblog.com/lawfare-podcast-ben-nimmo-whack-mole-game-disinformation
+    INFO:root:rank=4 pagerank=1.5099e-01 url=www.lawfareblog.com/todays-headlines-and-commentary-1963
+    INFO:root:rank=5 pagerank=1.5099e-01 url=www.lawfareblog.com/todays-headlines-and-commentary-1964
+    INFO:root:rank=6 pagerank=1.5071e-01 url=www.lawfareblog.com/lawfare-podcast-week-was-impeachment
+    INFO:root:rank=7 pagerank=1.4957e-01 url=www.lawfareblog.com/todays-headlines-and-commentary-1962
+    INFO:root:rank=8 pagerank=1.4367e-01 url=www.lawfareblog.com/cyberlaw-podcast-mistrusting-google
+    INFO:root:rank=9 pagerank=1.4240e-01 url=www.lawfareblog.com/lawfare-podcast-bonus-edition-gordon-sondland-vs-committee-no-bull
+   
    $ python3 pagerank.py --data=data/lawfareblog.csv.gz --verbose --filter_ratio=0.2 --alpha=0.99999
    ```
 
