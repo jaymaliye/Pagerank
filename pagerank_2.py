@@ -263,6 +263,7 @@ def url_satisfies_query(url, query):
                 return False
     return satisfies
 
+
 def get_similar_words(term, n=5, add_score=False):
     '''
     Returns a list of the n most similar word vectors.
@@ -277,6 +278,7 @@ def get_similar_words(term, n=5, add_score=False):
         return similar_words_v
 
     return similar_words
+
 
 if __name__=='__main__':
     import argparse
