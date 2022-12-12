@@ -11,7 +11,9 @@ import gzip
 import csv
 
 import logging
-
+import gensim.downloader
+vectors = gensim.downloader.load('word2vec-ruscorpora-300')
+p = 35
 
 class WebGraph():
 
@@ -124,6 +126,11 @@ class WebGraph():
         '''
         with torch.no_grad():
             n = self.P.shape[0]
+            
+            # Calculate a
+            nondangling_nodes = torch.sparse.sum(self.P,1).indices()
+            a = torch.ones([n,1])
+            a[nondangling_nodes] = 0
 
             # create variables if none given
             if v is None:
@@ -141,13 +148,15 @@ class WebGraph():
             x = xprev.detach().clone()
             for i in range(max_iterations):
                 xprev = x.detach().clone()
-
-                # compute the new x vector using Eq (5.1)
-                # FIXME: Task 1
-                # HINT: this can be done with a single call to the `torch.sparse.addmm` function,
-                # but you'll have to read the code above to figure out what variables should get passed to that function
-                # and what pre/post processing needs to be done to them
-
+                q = (alpha*x.t()@a + (1-alpha)) * v.t()
+                x = torch.sparse.addmm(
+                        q.t(),
+                        self.P.t(),
+                        x,
+                        beta=1,
+                        alpha=alpha
+                        )
+                x /= torch.norm(x)
                 # output debug information
                 residual = torch.norm(x-xprev)
                 logging.debug(f'i={i} residual={residual}')
@@ -158,8 +167,8 @@ class WebGraph():
 
             #x = x0.squeeze()
             return x.squeeze()
-
-
+        
+        
     def search(self, pi, query='', max_results=10):
         '''
         Logs all urls that match the query.
@@ -168,6 +177,34 @@ class WebGraph():
         n = self.P.shape[0]
         vals,indices = torch.topk(pi,n)
 
+        urls = [self._index_to_url(index.item()) for index in indices]
+        pagerank = [val.item() for val in vals]
+
+        scores = []
+
+        similar_words = []
+        for term in query.split():
+            if term[0] != '-':
+                similar_words += get_similar_words(term, add_score=True)
+
+        if query == '':
+            scores = pagerank
+
+        else:
+            for i, url in enumerate(urls):
+                score = 0
+                for word_vector in similar_words:
+                    word = word_vector[0]
+                    word_similarity = word_vector[1]
+                    new_n = url.count(word)
+                    score += new_n*(word_similarity**p)
+
+                ranking = pagerank[i] * score
+                scores.append(ranking)
+
+        url_score = list(zip(urls, scores))
+        url_score.sort(key=lambda x: x[1], reverse=True)
+        
         matches = 0
         for i in range(n):
             if matches >= max_results:
@@ -211,8 +248,12 @@ def url_satisfies_query(url, query):
     for term in terms:
         if term[0] != '-':
             num_terms+=1
+            similar_terms = get_similar_words(term)
             if term in url:
                 satisfies = True
+            for similar_term in similar_terms:
+                if similar_term in url:
+                    satisfies = True
     if num_terms==0:
         satisfies=True
 
@@ -222,6 +263,20 @@ def url_satisfies_query(url, query):
                 return False
     return satisfies
 
+def get_similar_words(term, n=5, add_score=False):
+    '''
+    Returns a list of the n most similar word vectors.
+    '''	
+    similar_words_v = vectors.most_similar(term)[:n]
+
+    similar_words = []
+    if not add_score:
+        for similar_word_v in similar_words_v:
+            similar_words.append(similar_word_v[0])
+    else: 
+        return similar_words_v
+
+    return similar_words
 
 if __name__=='__main__':
     import argparse
@@ -246,14 +301,3 @@ if __name__=='__main__':
     v = g.make_personalization_vector(args.personalization_vector_query)
     pi = g.power_method(v, alpha=args.alpha, max_iterations=args.max_iterations, epsilon=args.epsilon)
     g.search(pi, query=args.search_query, max_results=args.max_results)
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
