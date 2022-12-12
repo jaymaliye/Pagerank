@@ -12,7 +12,7 @@ import csv
 
 import logging
 import gensim.downloader
-vectors = gensim.downloader.load('word2vec-ruscorpora-300')
+vectors = gensim.downloader.load('glove-wiki-gigaword-300') # Gensim
 p = 35
 
 class WebGraph():
