@@ -412,7 +412,7 @@ Your goal should be to discover what topics that www.lawfareblog.com considers t
 1. Run the following commands, and paste their output into the code blocks below.
    
    Task 1, part 1:
-   ```
+ ```
 $ python3 pagerank.py --data=data/small.csv.gz --verbose
  DEBUG:root:computing indices
  DEBUG:root:computing values
@@ -446,10 +446,10 @@ $ python3 pagerank.py --data=data/small.csv.gz --verbose
  INFO:root:rank=3 ranking=2.3175e-01 url=2
  INFO:root:rank=4 ranking=1.8590e-01 url=3
  INFO:root:rank=5 ranking=1.6917e-01 url=1
-   ```
+```
 
    Task 1, part 2:
-   ```
+```
 $ python3 pagerank.py --data=data/lawfareblog.csv.gz --search_query='corona'
  INFO:root:rank=0 ranking=0.0000e+00 url=www.lawfareblog.com/lawfare-podcast-united-nations-and-coronavirus-crisis
  INFO:root:rank=1 ranking=0.0000e+00 url=www.lawfareblog.com/house-oversight-committee-holds-day-two-hearing-government-coronavirus-response
@@ -486,8 +486,7 @@ $ python3 pagerank.py --data=data/lawfareblog.csv.gz --search_query='iran'
  INFO:root:rank=7 ranking=1.0117e-07 url=www.lawfareblog.com/what-has-iran-done-now-primer-recent-iranian-missile-tests-and-sanctions
  INFO:root:rank=8 ranking=1.0044e-07 url=www.lawfareblog.com/two-further-notes-npt-and-iranian-legal-arguments
  INFO:root:rank=9 ranking=9.9820e-08 url=www.lawfareblog.com/iranian-missile-launch-and-gray-ladys-confusion
-
-   ```
+ ```
 
    Task 1, part 3:
    ```
